@@ -15,7 +15,8 @@
         <main class="main">
             <div class="seleziona-genere">
                 <span class="seleziona-genere__text">Scegli per genere da filtrare </span>
-                <select class="seleziona-genere__select" name="select-genre" @change="filtraGenere">
+                <select class="seleziona-genere__select" name="select-genre" @change="filtraGenere"
+                v-model="sceltaGenere">
                     <option value="tutti" selected="selected">Tutti</option>
                     <option value="Rock">Rock</option>
                     <option value="Pop">Pop</option>
