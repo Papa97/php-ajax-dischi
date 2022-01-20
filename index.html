@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dischi</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header"></header>
+        <main class="main">
+            <div class="seleziona-genere">
+                <span class="seleziona-genere__text">Scegli per genere da filtrare </span>
+                <select class="seleziona-genere__select" name="select-genre" @change="filtraGenere">
+                    <option value="tutti" selected="selected">Tutti</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                </select>
+            </div>
+            <div class="container flex">
+                
+                <div v-for="album in genereFiltered" class="card">
+                    <img :src="album.poster" alt="" class="card__img">
+                    <h2 class="card__title">{{album.title}}</h2>
+                    <p class="card__author">{{album.author}}</p>
+                    <p class="card__year">{{album.year}}</p>
+                </div>
+            </div>
+        </main>
+        
+    
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

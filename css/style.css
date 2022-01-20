@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100px;
+    background-color: #2e3a46
+}
+
+.main{
+    background-color: #1e2d3b;
+}
+
+.seleziona-genere{
+    text-align: center;
+    color: #fff;
+}
+
+.seleziona-genere__select{
+    border-radius: 5px;
+}
+.seleziona-genere__select,
+.seleziona-genere__text {
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card__title {
+    margin-top:15px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.card__author{
+    margin-top: 15px;
+}
+
+.card__author,
+.card__year {
+    color: grey
+}
+
+
+
+.card {
+    width: calc((100% / 5) - 10px);
+    text-align: center;
+    color: #fff;
+    background-color: #2e3a46;
+    margin: 20px 0px;
+    padding: 20px 0;
+}
+
+.card__img {
+    width: 80%;
+}
+
