@@ -2,7 +2,7 @@ const app = new Vue ({
     el: "#app",
     data: {
         albums: [],
-        sceltaGenere: "",
+        sceltaGenere: "tutti",
     },
     created() {
         axios.get("./backend.php")
@@ -11,17 +11,6 @@ const app = new Vue ({
         })
     },
     methods: {
-        filtraGenere(){
-            this.sceltaGenere = "";
-            console.log();
-        },
-        // filtraGenere() {
-        //     if (this.sceltaGenere == "tutti") {
-        //         return this.album;
-        //     } else {
-        //         return this.album.filter((elm) => elm.genre.includes(this.sceltaGenere));
-        //     };
-        // }
     },
     computed: {
         genereFiltered () {
