@@ -11,8 +11,9 @@ const app = new Vue ({
         })
     },
     methods: {
-        filtraGenere(payload){
-            this.sceltaGenere = payload;
+        filtraGenere(){
+            this.sceltaGenere = "";
+            console.log();
         },
         // filtraGenere() {
         //     if (this.sceltaGenere == "tutti") {
